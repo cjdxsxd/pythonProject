@@ -37,6 +37,7 @@ def test_loader():
     runner2 = unittest.TextTestRunner()
     runner2.run(driver)
 
+
 if __name__ == "__main__":
     test_single_test()
     sendemail.send_email()
