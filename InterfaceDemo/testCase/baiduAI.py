@@ -16,7 +16,7 @@ class BaiDuAiGetString(unittest.TestCase):
     def test_string(self):
         self.url2 = "https://aip.baidubce.com/oauth/2.0/token"
         self.data2 = {"grant_type": "client_credentials", "client_id": "QK5Y35TTCM4f3Cm83D4R4VMg", "client_secret": "RN9cVdZ2GIY4foEueqE8DOPqZHhr719X"}
-        self.token = requests.post(self.url2, data= self.data2)
+        self.token = requests.post(self.url2, data=self.data2)
         self.content = self.token.text
         self.dic = json.loads(self.content)
         self.tokenvalue = self.dic['access_token']

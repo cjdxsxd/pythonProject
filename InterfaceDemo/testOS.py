@@ -9,6 +9,8 @@ import os
 import time
 import datetime
 import sys
+import random
+from functools import reduce
 
 test = os.getcwd()
 # print(test)
@@ -32,3 +34,47 @@ print(type(msg_to))
 
 str = b'sxd'
 print(type(str))
+
+
+print(random.randint(10, 15))
+
+
+print(os.path.abspath(__file__))
+print(os.path.split(os.path.abspath(__file__))[0])
+print(os.getcwd())
+
+
+list_sxd = ['s', 'x', 'd']
+tuple_sxd = ['s', 'x', 'd']
+list_sxd.append('sxd')
+list_sxd.insert(0, 'sxdinsert')
+list_sxd.pop()
+list_sxd.pop(0)
+list_sxd[0]='sxd'
+print(list_sxd)
+print(tuple_sxd[-1])
+print(list_sxd[0:2])
+print(list_sxd[-2:])
+print(list_sxd[-2:-1])
+
+print(random.random())
+
+#1个参数
+g = lambda x: x+3
+print(g(3))
+#2个参数
+g2 = lambda x, y: x+y
+print(g2(2, 3))
+#0个参数
+g3 = lambda: 2
+print(g3())
+
+print(list(range(6)))
+
+print(reduce(lambda x,y: x+y, list(range(1,6))))
+
+def action(x):
+    return  lambda y: x+y
+
+f = action(2)
+print(f(3))
