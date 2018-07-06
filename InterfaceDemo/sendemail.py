@@ -35,7 +35,7 @@ def send_email():
 
     server = smtplib.SMTP('smtp.163.com', 25)
     server.set_debuglevel(1)
-    server.login('3360048@163.com', '421127Cjdxsxd')
+    server.login('3360048@163.com', 'xxxxxx')
     server.set_debuglevel(1)
     server.sendmail(msg_from, msg_to, msg_attach.as_string())
     server.quit()
