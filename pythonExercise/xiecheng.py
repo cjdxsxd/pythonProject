@@ -8,12 +8,14 @@
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s-%(levelname)s-%(message)s')
 
+
 def consumer():
     r = 'start'
     while True:
         n = yield r
         logging.info('consumer is %s' % n)
         r = '200 ok'
+
 
 def produce(c):
     c.send(None)
@@ -24,6 +26,7 @@ def produce(c):
         s = c.send(n)
         logging.info('produce receive consumer returnvalue is %s'% s)
     c.close()
+
 
 c = consumer()
 produce(c)

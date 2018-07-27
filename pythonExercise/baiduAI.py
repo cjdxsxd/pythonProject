@@ -37,12 +37,16 @@ def baiduOCR(picfile, outfile):
     API_KEY = 'QK5Y35TTCM4f3Cm83D4R4VMg'
     SECRECT_KEY = 'RN9cVdZ2GIY4foEueqE8DOPqZHhr719X'
     client = AipOcr(APP_ID, API_KEY, SECRECT_KEY)
+    # client.setConnectionTimeoutInMillis()
 
     i = open(picfile, 'rb')
     img = i.read()
+    options = {}
+    options["language_type"] = "ENG"
     # print("正在识别图片：\t" + filename)
-    message = client.basicGeneral(img)   # 通用文字识别，每天 50 000 次免费
-    #message = client.basicAccurate(img)   # 通用文字高精度识别，每天 800 次免费
+    # message = client.basicGeneral(img)   # 通用文字识别，每天 50 000 次免费
+    message = client.basicAccurate(img, options)   # 通用文字高精度识别，每天 800 次免费
+
     print("识别成功！")
     i.close();
 
@@ -60,11 +64,14 @@ def baiduOCR(picfile, outfile):
 
 if __name__ == "__main__":
 
-    outfile = 'D:\\export.txt'
-
+    outfile = 'D:\\exports123.txt'
+    # if path.exists(outfile):
+    #     os.remove(outfile)
     # 首先对过大的图片进行压缩，以提高识别速度，将压缩的图片保存与临时文件夹中
     # for picfile in glob.glob("picture/*"):
     #     convertimg(picfile, outdir)
     # print("图片识别...")
-    picfile = 'D:\\02python\\youzhengimage.jpg'
-    baiduOCR(picfile, outfile)
+    for pic in glob.glob("D:\\pic\\*"):
+    # picfile = 'D:\\02python\\youzhengimage.jpg'
+        print(pic)
+        baiduOCR(pic, outfile)
