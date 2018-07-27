@@ -11,6 +11,8 @@ import datetime
 import sys
 import random
 from functools import reduce
+import json
+
 
 test = os.getcwd()
 # print(test)
@@ -73,8 +75,31 @@ print(list(range(6)))
 
 print(reduce(lambda x,y: x+y, list(range(1,6))))
 
+
 def action(x):
-    return  lambda y: x+y
+    return lambda y: x+y
+
 
 f = action(2)
 print(f(3))
+
+
+print(os.path.basename("D:\\02python\\youzhengimage.jpg"))
+
+dicts = {"name": "123", "age": "12"}
+print(type(dicts))
+dicts2str = json.dumps(dicts, indent=4)
+print(dicts2str)
+print(type(dicts2str))
+
+str2dicts = json.loads(dicts2str)
+print(type(str2dicts))
+print(str2dicts)
+
+
+lists = [1,2,3,4,5]
+list2json = json.dumps(lists)
+print(type(list2json))
+
+x, y =[1,2]
+print(x)
