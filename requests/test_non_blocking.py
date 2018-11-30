@@ -9,8 +9,9 @@
 import grequests
 
 # 非阻塞式请求
-
+# 也是并发请求
 urls = ['http://www.heroku.com', 'http://python-tablib.org', 'http://httpbin.org']
 rs = (grequests.get(u) for u in urls)
 rsp = grequests.map(rs)
 print(rsp)
+print("ok")
