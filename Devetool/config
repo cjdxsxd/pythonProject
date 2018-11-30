@@ -1,0 +1,7 @@
+wxFormBuilder需要替换：
+wx.ST_SIZEGRIP:wx.STB_SIZEGRIP
+
+　即执行：pyinstaller.exe  -w -F  D:\02python\pythonProject\Devetool\test_network.py
+
+
+pyinstaller  -F -L D:\02python\pythonProject\Devetool\test_network.py

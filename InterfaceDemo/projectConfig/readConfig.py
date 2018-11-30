@@ -17,5 +17,5 @@ def get_item(sections, keys):
 
 if __name__ == "__main__":
     s = get_item("mail_163", "To")
-    str = s[1:-2]
+    str = s[1:-1]
     print(str)

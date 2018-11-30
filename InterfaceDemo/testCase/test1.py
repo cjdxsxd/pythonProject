@@ -22,10 +22,10 @@ class TestRequests(unittest.TestCase):
 
     def test_get_sou_ye(self):
         self.url = "http://www.baidu.com/"
-        r = requests.get(self.url)
-        self.assertEqual(200, r.status_code)
-        print(r.headers)
-
+        self.r = requests.get(self.url)
+        self.assertEqual(200, self.r.status_code)
+        print(self.r.headers)
+        return self.r.status_code
 
     def test_get_text(self):
         self.url = "http://www.baidu.com/"

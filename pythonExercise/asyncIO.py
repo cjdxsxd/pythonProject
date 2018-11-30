@@ -27,3 +27,4 @@ async def wget(host):
 loop = asyncio.get_event_loop()
 task = [wget(host) for host in ['www.baidu.com','www.sohu.com']]
 loop.run_until_complete(asyncio.wait(task))
+loop.close()

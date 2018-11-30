@@ -63,13 +63,13 @@ print(random.random())
 
 #1个参数
 g = lambda x: x+3
-print(g(3))
+print("一个参数", g(3))
 #2个参数
 g2 = lambda x, y: x+y
-print(g2(2, 3))
+print("二个参数", g2(2, 3))
 #0个参数
 g3 = lambda: 2
-print(g3())
+print("零个参数", g3())
 
 print(list(range(6)))
 
@@ -103,3 +103,8 @@ print(type(list2json))
 
 x, y =[1,2]
 print(x)
+
+
+
+print(os.getcwd())
+print(os.path.dirname("D:\02python"))

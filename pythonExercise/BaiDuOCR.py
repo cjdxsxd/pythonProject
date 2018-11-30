@@ -25,7 +25,7 @@ def get_image_content(filepath):
         return f.read()
 
 
-image = get_image_content("D:\\image\\driver.png")
+image = get_image_content("D:\\154108134050658621.jpg")
 
 
 def get_basic_general():
@@ -48,6 +48,7 @@ def get_basic_accurate():
     options = {}
     options['language_type']='CHN_ENG'
     r = client.basicAccurate(image)
+    print(r)
     with open("D:\\image\\youchu456.txt", 'a+') as w:
         for text in r['words_result']:
             w.writelines(text.get('words')+'\n')
@@ -87,7 +88,7 @@ def get_drive_lisence():
 
 if __name__ == '__main__':
     # get_basic_general()
-    # get_basic_accurate()
+    get_basic_accurate()
     # get_id_card()
     # get_bank_card()
-    get_drive_lisence()
+    # get_drive_lisence()

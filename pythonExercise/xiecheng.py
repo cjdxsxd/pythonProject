@@ -10,10 +10,13 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s-%(levelname)s-%(mess
 
 
 def consumer():
-    r = 'start'
+    r = ''
     while True:
-        n = yield r
-        logging.info('consumer is %s' % n)
+        m = yield r
+        print(r)
+        if not m:
+            return
+        logging.info('consumer is %s' % m)
         r = '200 ok'
 
 
@@ -29,4 +32,5 @@ def produce(c):
 
 
 c = consumer()
+logging.info("调用consumer()")
 produce(c)

@@ -31,10 +31,11 @@ list = [1,2,3]
 lists = (1,2,3,4,5)
 # print(kebiancanshu(*lists))
 
+
 # 关键字参数
 def keywordcanshu(name, age, **kwa):
 
-    print("name:",name,"age:",age,"other:",kwa)
+    print("name:", name, "age:", age, "other:", kwa)
 
 # keywordcanshu("sxd","11",city="beijing")
 dict = {"city":"beijing","sex":"F"}
@@ -47,4 +48,6 @@ def products(x, y, *argus):
         print(i)
         s = s*i
     return s
-print(products(*(1,2,3)))
+
+
+print(products(*(1, 2, 3)))

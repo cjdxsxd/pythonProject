@@ -71,7 +71,7 @@ if __name__ == "__main__":
     # for picfile in glob.glob("picture/*"):
     #     convertimg(picfile, outdir)
     # print("图片识别...")
-    for pic in glob.glob("D:\\pic\\*"):
+    for pic in glob.glob("D:\\154108134050658621.jpg"):
     # picfile = 'D:\\02python\\youzhengimage.jpg'
         print(pic)
         baiduOCR(pic, outfile)

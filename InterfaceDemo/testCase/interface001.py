@@ -4,7 +4,6 @@
 import unittest
 import requests
 
-
 class Interface001(unittest.TestCase):
     """001接口测试案例 """
 

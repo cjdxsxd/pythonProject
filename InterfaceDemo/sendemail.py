@@ -40,5 +40,6 @@ def send_email():
     server.sendmail(msg_from, msg_to, msg_attach.as_string())
     server.quit()
 
+
 if __name__ == '__main__':
     send_email()

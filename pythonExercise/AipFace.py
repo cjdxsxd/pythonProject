@@ -9,9 +9,9 @@
 from aip import AipFace
 import base64, json
 
-APP_ID = '	11586401'  # 人脸识别ID
-API_KEY = 'n5GRUbXfSihBeZSlxDLwgY6K'
-SECRECT_KEY = 'Og2QDA9qQsklvVitiRa0Nt3jnt2UNGIF'
+APP_ID = '11601549'  # 人脸识别ID
+API_KEY = 's6TCPsxSR3qdXk5FUr6Rcqbv'
+SECRECT_KEY = 'LNq2vqQGW9kgFAwhgQ1IoSn9TlnZfVKd'
 # 创建人脸检测客户端
 client = AipFace(APP_ID, API_KEY, SECRECT_KEY)
 
