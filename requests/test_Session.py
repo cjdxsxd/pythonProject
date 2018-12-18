@@ -28,7 +28,7 @@ url = ''
 # jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
 # jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere')
 # s.cookies = jar
-# r = s.get('http://httpbin.org/cookies')
+# r = s.get('http://httpbin.org/elsewhere')
 # print(r.text)
 
 # jar = requests.cookies.RequestsCookieJar()
@@ -41,6 +41,6 @@ url = ''
 # s.close()
 
 # 4、会话对象做上下文管理器,response对象包含服务器返回所有信息，和request对象
-with requests.Session() as s:
-    r = s.get('http://www.baidu.com/')
-    print(r.request.headers)
+# with requests.Session() as s:
+#     r = s.get('http://www.baidu.com/')
+#     print(r.request.headers)
