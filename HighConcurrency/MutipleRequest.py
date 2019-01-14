@@ -16,6 +16,8 @@ import aiohttp
 
 tasks = []
 url = 'http://www.baidu.com/{}'
+
+
 # 异步函数
 async def hello(url):
     async with aiohttp.ClientSession() as session:
@@ -23,7 +25,7 @@ async def hello(url):
             await response.text()
 
 
-def run():
+async def run():
     for i in range(5):
         task = asyncio.ensure_future(hello(url.format(i)))
         tasks.append(task)
